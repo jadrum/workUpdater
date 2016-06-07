@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work updates</title>
+    <script src="https://npmcdn.com/redux@latest/dist/redux.min.js"></script>
+  </head>
+  <body>
+    <div class="page">
+
+      <h1 style="text-align:center;">Work Update</h1>
+
+      <p style="text-align:center;border-radius:5px;background-color: #f2f2f2;">
+        <span id="status">Give a status update</span>
+      </p>
+<!--
+      <form id="statusForm">
+        <input type="text" name="stat" required>
+        <button type="Submit">Submit status update</button>
+      </form>
+--> 
+      <p style="text-align:center;border-radius:5px;background-color: #f2f2f2;">
+        I am <span id="iAmDoing">working</span>
+      </p>
+      <p style="text-align:center;">
+        <button id="working" style="background-color: #4caf50;">Working</button>
+        <button id="atMeeting" style="background-color: #FFFF00;">At a meeting</button>
+        <button id="onBreak" style="background-color: #FF3333;">On my break</button>
+      </p>  
+    </div>
+    <script>
+      function updater(state, action) {
+        if(typeof state === 'undefined'){
+          return "working"
+        } 
+        
+        switch(action.type) {
+          case 'WORKING':
+            return "working"
+          case 'ATMEETING':
+            return "at a meeting"
+          case 'ONBREAK':
+            return "on my break"
+          default:
+            return state
+        }
+      }
+
+      var store = Redux.createStore(updater)
+      var whatImDoin = document.getElementById('iAmDoing')
+
+      function render() {
+        whatImDoin.innerHTML = store.getState().toString();
+      }
+
+      render()
+      store.subscribe(render)
+
+      document.getElementById('working')
+        .addEventListener('click', function() {
+          store.dispatch({ type: 'WORKING' })
+        })
+
+      document.getElementById('atMeeting')
+        .addEventListener('click', function() {
+          store.dispatch({ type: 'ATMEETING' })
+        })
+
+      document.getElementById('onBreak')
+        .addEventListener('click', function() {
+          store.dispatch({ type: 'ONBREAK' })
+        })
+    </script>
+  </body>
+</html>
