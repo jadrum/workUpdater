@@ -12,12 +12,13 @@
       <p style="text-align:center;border-radius:5px;background-color: #f2f2f2;">
         <span id="status">Give a status update</span>
       </p>
-<!--
-      <form id="statusForm">
-        <input type="text" name="stat" required>
-        <button type="Submit">Submit status update</button>
+
+      <form id="statusForm" action="javascript:statusUpdater()"
+        style="text-align:center;">
+        <textarea id="stat" rows="5" cols="70" style="width:100%"></textarea>
+        <button type="Submit" id="bitch" style="background-color: #4caf50">Submit status update</button>
       </form>
---> 
+
       <p style="text-align:center;border-radius:5px;background-color: #f2f2f2;">
         I am <span id="iAmDoing">working</span>
       </p>
@@ -44,7 +45,20 @@
             return state
         }
       }
+     /* 
+      function statusUpdate(state,action) {
+        if(typeof state === 'undefined') {
+          return 'Give a status update'
+        }
 
+        switch(action.type) {
+          case 'UPDATEIT':
+            return document.getElementById("stat").value;
+          default:
+            return state
+        }
+      }
+*/
       var store = Redux.createStore(updater)
       var whatImDoin = document.getElementById('iAmDoing')
 
@@ -54,6 +68,21 @@
 
       render()
       store.subscribe(render)
+/*
+      document.getElementById('bitch')
+      .addEventListener('onSubmit', function() {
+          document.getElementById("status").innerHTML =
+          document.getElementById("stat").value;
+          //store.dispatch({ type: 'UPDATEIT' })
+        })
+        */
+
+
+      function statusUpdater(event) {
+        document.getElementById('status').innerHTML =
+        document.getElementById('stat').value;
+        document.getElementById('statusForm').reset();
+      }
 
       document.getElementById('working')
         .addEventListener('click', function() {
