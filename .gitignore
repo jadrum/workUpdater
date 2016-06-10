@@ -1,0 +1,5 @@
+# This ignores app2 node modules
+app2/node_modules
+
+# This ignores app2_redo node moudles
+app2_redo/node_modules

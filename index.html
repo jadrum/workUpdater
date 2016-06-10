@@ -3,30 +3,85 @@
   <head>
     <title>Work updates</title>
     <script src="https://npmcdn.com/redux@latest/dist/redux.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="file:////Users/justindrum/firstReduxApps/css/main.css"> 
   </head>
   <body>
-    <div class="page">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">Work Status Updater</a>
+        </div>
 
-      <h1 style="text-align:center;">Work Update</h1>
-
-      <p style="text-align:center;border-radius:5px;background-color: #f2f2f2;">
-        <span id="status">Give a status update</span>
-      </p>
-
-      <form id="statusForm" action="javascript:statusUpdater()"
-        style="text-align:center;">
-        <textarea id="stat" rows="5" cols="70" style="width:100%"></textarea>
-        <button type="Submit" id="bitch" style="background-color: #4caf50">Submit status update</button>
-      </form>
-
-      <p style="text-align:center;border-radius:5px;background-color: #f2f2f2;">
-        I am <span id="iAmDoing">working</span>
-      </p>
-      <p style="text-align:center;">
-        <button id="working" style="background-color: #4caf50;">Working</button>
-        <button id="atMeeting" style="background-color: #FFFF00;">At a meeting</button>
-        <button id="onBreak" style="background-color: #FF3333;">On my break</button>
-      </p>  
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                role="button" aria-haspopup="true"
+                aria-expanded="false">Dropdown <span class="caret">&nbsp; </span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>   
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel panel-info" >
+            <div class="panel-heading">Most recent update</div>
+            <div class="panel-body">
+              <span id="status">Waiting on a status update...</span>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">  
+          <form class="form-horizontal top gradient" id="statusForm" action="javascript:statusUpdater()">
+            <div class="form-group">
+              <label class="col-xs-2 control-label txtCol">Work Status:</label>
+              <div class="col-xs-10">
+                <textarea class="form-control" id="stat" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-10 col-xs-offset-2">
+                <button type="Submit" id="bit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-xs-12 top">
+          <div class="panel panel-info">
+            <div class="panel-heading txtCol">
+              I am <span id="iAmDoing">working</span>
+            </div>
+            <div class="panel-body">
+              <p style="text-align:center;">
+                <button id="working" class="btn btn-primary">Working</button>
+                <button id="atMeeting" class="btn btn-primary">At a meeting</button> 
+                <button id="onBreak" class="btn btn-primary">On my break</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       function updater(state, action) {
