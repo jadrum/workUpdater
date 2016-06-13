@@ -86,24 +86,10 @@
         </div>
       </div>
     </div>
+    <script
+      src="file:////Users/justindrum/firstReduxApps/app1/reducers/updater.js"></script>
     <script>
-      function updater(state, action) {
-        if(typeof state === 'undefined'){
-          return "working"
-        } 
-        
-        switch(action.type) {
-          case 'WORKING':
-            return "working."
-          case 'ATMEETING':
-            return "at a meeting."
-          case 'ONBREAK':
-            return "on my break."
-          default:
-            return state
-        }
-      }
-      var store = Redux.createStore(updater)
+     var store = Redux.createStore(updater)
       var whatImDoin = document.getElementById('iAmDoing')
 
       function render() {
@@ -119,20 +105,8 @@
         document.getElementById('statusForm').reset();
       }
 
-      document.getElementById('working')
-        .addEventListener('click', function() {
-          store.dispatch({ type: 'WORKING' })
-        })
-
-      document.getElementById('atMeeting')
-        .addEventListener('click', function() {
-          store.dispatch({ type: 'ATMEETING' })
-        })
-
-      document.getElementById('onBreak')
-        .addEventListener('click', function() {
-          store.dispatch({ type: 'ONBREAK' })
-        })
-    </script>
-  </body>
+   </script>
+   <script
+     src="file:////Users/justindrum/firstReduxApps/app1/eventListeners.js"></script> 
+ </body>
 </html>
