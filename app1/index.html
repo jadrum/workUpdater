@@ -86,13 +86,10 @@
         </div>
       </div>
     </div>
-    <script
-      src="file:////Users/justindrum/firstReduxApps/app1/reducers/updater.js"></script>
+    <script src="file:////Users/justindrum/firstReduxApps/app1/reducers/updater.js"></script>
+    <script src="file:////Users/justindrum/firstReduxApps/app1/store.js"></script>
     <script>
-     var store = Redux.createStore(updater)
-      var whatImDoin = document.getElementById('iAmDoing')
-
-      function render() {
+     function render() {
         whatImDoin.innerHTML = store.getState().toString();
       }
 
@@ -106,7 +103,6 @@
       }
 
    </script>
-   <script
-     src="file:////Users/justindrum/firstReduxApps/app1/eventListeners.js"></script> 
+   <script src="file:////Users/justindrum/firstReduxApps/app1/eventListeners.js"></script> 
  </body>
 </html>
