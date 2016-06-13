@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="file:////Users/justindrum/firstReduxApps/css/main.css"> 
+    <link rel="stylesheet"
+    href="file:////Users/justindrum/firstReduxApps/app1/css/main.css"> 
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -18,14 +19,16 @@
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
           </button>
-          <a class="navbar-brand" href="#">Work Status Updater</a>
+          <a class="navbar-brand" href="#"><strong class="txtCol">Work Status
+              Updater</strong></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="#">Updater<span class="sr-only">(current)</span></a></li>
+            <li><a
+              href="file:////Users/justindrum/firstReduxApps/app1/index2.html">Tracker</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                 role="button" aria-haspopup="true"
@@ -42,7 +45,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="panel panel-info" >
-            <div class="panel-heading">Most recent update</div>
+            <div class="panel-heading"><strong>Most recent update</strong></div>
             <div class="panel-body">
               <span id="status">Waiting on a status update...</span>
             </div>  
@@ -70,7 +73,7 @@
         <div class="col-xs-12 top">
           <div class="panel panel-info">
             <div class="panel-heading txtCol">
-              I am <span id="iAmDoing">working</span>
+              <strong>I am <span id="iAmDoing">working.</span></strong>
             </div>
             <div class="panel-body">
               <p style="text-align:center;">
@@ -91,11 +94,11 @@
         
         switch(action.type) {
           case 'WORKING':
-            return "working"
+            return "working."
           case 'ATMEETING':
-            return "at a meeting"
+            return "at a meeting."
           case 'ONBREAK':
-            return "on my break"
+            return "on my break."
           default:
             return state
         }

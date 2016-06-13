@@ -3,6 +3,10 @@ body {
   background-color: #2E2E2E;
 }
 
+.nav.navbar-nav li a {
+  color: #4573a1;
+}
+
 .gradient {
   background-color: #BDE5F8;
   border-radius: 5px;

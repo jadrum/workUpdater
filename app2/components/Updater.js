@@ -16,9 +16,8 @@ class Updater extends Component {
     const { value, onWorking, onMeeting } = this.props;
     return (
       <p>
-        <p>
-          I am <span>{value}</span>
-        </p>
+        I am <span>{value}</span>
+        
         {' '}
         <button onClick={onWorking}>Working</button>
         {' '}
