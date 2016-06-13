@@ -3,3 +3,6 @@ app2/node_modules
 
 # This ignores app2_redo node moudles
 app2_redo/node_modules
+
+# This ignors app1trial node modules
+app1trial/node_modules

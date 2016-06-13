@@ -1,139 +1,22 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
   <head>
-    <title>Work updates</title>
-    <script src="https://npmcdn.com/redux@latest/dist/redux.min.js"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Work Updates</title>
+    <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet"
-    href="file:////Users/justindrum/firstReduxApps/app1/css/main.css"> 
+    href="file:////Users/justindrum/firstReduxApps/app1trial/css/main.css/"> 
   </head>
+
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-          </button>
-          <a class="navbar-brand" href="#"><strong class="txtCol">Work Status
-              Updater</strong></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Updater<span class="sr-only">(current)</span></a></li>
-            <li><a
-              href="file:////Users/justindrum/firstReduxApps/app1/index2.html">Tracker</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                role="button" aria-haspopup="true"
-                aria-expanded="false">Coming soon... <span class="caret">&nbsp; </span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>   
-      <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="panel panel-info" >
-            <div class="panel-heading"><strong>Most recent update</strong></div>
-            <div class="panel-body">
-              <span id="status">Waiting on a status update...</span>
-            </div>  
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">  
-          <form class="form-horizontal top gradient" id="statusForm" action="javascript:statusUpdater()">
-            <div class="form-group">
-              <label class="col-xs-2 control-label txtCol">Work Status:</label>
-              <div class="col-xs-10">
-                <textarea class="form-control" id="stat" rows="5"></textarea>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-xs-10 col-xs-offset-2">
-                <button type="Submit" id="bit" class="btn btn-primary">Submit</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>  
-      <div class="row">
-        <div class="col-xs-12 top">
-          <div class="panel panel-info">
-            <div class="panel-heading txtCol">
-              <strong>I am <span id="iAmDoing">working.</span></strong>
-            </div>
-            <div class="panel-body">
-              <p style="text-align:center;">
-                <button id="working" class="btn btn-primary">Working</button>
-                <button id="atMeeting" class="btn btn-primary">At a meeting</button> 
-                <button id="onBreak" class="btn btn-primary">On my break</button>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="updaterapp" id="root">
     </div>
-    <script>
-      function updater(state, action) {
-        if(typeof state === 'undefined'){
-          return "working"
-        } 
-        
-        switch(action.type) {
-          case 'WORKING':
-            return "working."
-          case 'ATMEETING':
-            return "at a meeting."
-          case 'ONBREAK':
-            return "on my break."
-          default:
-            return state
-        }
-      }
-
-      var store = Redux.createStore(updater)
-      var whatImDoin = document.getElementById('iAmDoing')
-
-      function render() {
-        whatImDoin.innerHTML = store.getState().toString();
-      }
-
-      render()
-      store.subscribe(render)
-
-      function statusUpdater(event) {
-        document.getElementById('status').innerHTML =
-        document.getElementById('stat').value;
-        document.getElementById('statusForm').reset();
-      }
-
-      document.getElementById('working')
-        .addEventListener('click', function() {
-          store.dispatch({ type: 'WORKING' })
-        })
-
-      document.getElementById('atMeeting')
-        .addEventListener('click', function() {
-          store.dispatch({ type: 'ATMEETING' })
-        })
-
-      document.getElementById('onBreak')
-        .addEventListener('click', function() {
-          store.dispatch({ type: 'ONBREAK' })
-        })
-    </script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+      src="file:////Users/justindrum/firstReduxApps/components/App.js/"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </body>
 </html>
