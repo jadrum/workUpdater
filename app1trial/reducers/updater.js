@@ -1,7 +1,7 @@
 const updater = (state, action) => {
   console.log("Updating your work status!!!");
   
-  /* if(typeof state === 'undefined'){
+  if(typeof state === 'undefined'){
     return "working"
   } 
 
@@ -14,7 +14,7 @@ const updater = (state, action) => {
       return "on my break."
     default:
       return state
-  } */
+  } 
 }
 
 export default updater 

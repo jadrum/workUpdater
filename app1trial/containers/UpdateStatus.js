@@ -22,7 +22,7 @@ let UpdateStatus = ({ dispatch }) => {
               <label className="col-xs-2 control-label txtCol">Work Status:</label>
               <div className="col-xs-10">
                 <textarea className="form-control" rows="5" 
-                  ref={node => { input = node }}>
+                  ref={node => { textarea = node }}>
                     </textarea>
               </div>
             </div>
