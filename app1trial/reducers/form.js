@@ -1,5 +1,7 @@
 const form = (state, action) => {
-  if (typeof state === 'undefined') {
+  console.log("Sending the form!!");
+  
+  /*  if (typeof state === 'undefined') {
     return "Waiting on a status update..."
   } 
   switch(action.type) {
@@ -7,7 +9,7 @@ const form = (state, action) => {
       return 'undefined'
     default:
       return state
-  }
+  } */
 }
 
 export default form
