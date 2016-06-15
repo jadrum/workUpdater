@@ -1,6 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { task } from '../actions'
 
-const ImDoing = () => (
+let CurrentTask = ({ dispatch }) => (
   <div className="container-fluid">
     <div className="row">
       <div className="col-xs-12 top">
@@ -10,9 +12,12 @@ const ImDoing = () => (
           </div>
           <div className="panel-body">
             <div className="btn-toolbar">
-              <button id="working" className="btn btn-primary btn-pad">Working</button>
-              <button id="atMeeting" className="btn btn-primary btn-pad">At a meeting</button> 
-              <button id="onBreak" className="btn btn-primary btn-pad">On my break</button>
+              <button className="btn btn-primary btn-pad" 
+                onClick={ () => dispatch(task('working')) }>Working</button>
+              <button className="btn btn-primary btn-pad"
+                onClick={ () => dispatch(task('atmeeting')) }>At a meeting</button> 
+              <button className="btn btn-primary btn-pad"
+                onClick={ () => dispatch(task('onbreak')) }>On my break</button>
             </div>
           </div>
         </div>
@@ -21,4 +26,6 @@ const ImDoing = () => (
   </div>
 )
 
-export default ImDoing 
+CurrentTask = connect()(CurrentTask)
+
+export default CurrentTask 

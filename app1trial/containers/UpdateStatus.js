@@ -16,7 +16,7 @@ let UpdateStatus = ({ dispatch }) => {
                 return
               }
               dispatch(updateStatus(textarea.value))
-              input.value = ''
+              textarea.value = ''
             }}>
             <div className="form-group">
               <label className="col-xs-2 control-label txtCol">Work Status:</label>
