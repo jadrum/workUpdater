@@ -8,16 +8,16 @@ import UpdateStatus from '../containers/UpdateStatus'
 let App = (state) => (
    <div>
       <Navbar />
-      <Status form={state.form}/>
+      <Status status={state.status}/>
       <UpdateStatus  />
-      <CurrentTask updater={state.updater} />
+      <CurrentTask currenttask={state.currenttask} />
  </div>
 )
 
 function mapStateToProps(state) {
   return {
-    form: state.form,
-    updater: state.updater
+    status: state.status,
+    currenttask: state.currenttask
   }
 }
 

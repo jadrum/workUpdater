@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
-import updater from './updater'
-import form from './form'
+import currenttask from './currenttask'
+import status from './form'
 
 const updaterApp = combineReducers({
-  updater,
-  form
+  currenttask,
+  status
 })
 
 export default updaterApp

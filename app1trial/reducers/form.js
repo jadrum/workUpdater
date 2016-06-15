@@ -1,4 +1,4 @@
-const form = (state, action) => {
+const status = (state, action) => {
   if (typeof state === 'undefined') {
     return "Waiting on a status update..."
   } 
@@ -12,4 +12,4 @@ const form = (state, action) => {
   }
 }
 
-export default form
+export default status

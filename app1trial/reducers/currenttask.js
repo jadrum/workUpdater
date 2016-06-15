@@ -1,4 +1,4 @@
-const updater = (state, action) => {
+const CurrentTask = (state, action) => {
   if(typeof state === 'undefined'){
     return "working"
   } 
@@ -18,4 +18,4 @@ const updater = (state, action) => {
   } 
 }
 
-export default updater 
+export default CurrentTask 
