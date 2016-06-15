@@ -5,13 +5,13 @@ import Status from './Status'
 import CurrentTask from './CurrentTask'
 import UpdateStatus from '../containers/UpdateStatus'
 
-let App = () => (
-    <div>
+let App = (state) => (
+   <div>
       <Navbar />
-      <Status />
-      <UpdateStatus />
-      <CurrentTask />
-    </div>
+      <Status form={state.form}/>
+      <UpdateStatus  />
+      <CurrentTask updater={state.updater} />
+ </div>
 )
 
 function mapStateToProps(state) {

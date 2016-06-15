@@ -8,17 +8,23 @@ let CurrentTask = ({ dispatch }) => (
       <div className="col-xs-12 top">
         <div className="panel panel-info">
           <div className="panel-heading txtCol">
-            <strong>I am <span id="iAmDoing">working.</span></strong>
+            <h4>I am put the current task here </h4>
           </div>
           <div className="panel-body">
-            <div className="btn-toolbar">
-              <button className="btn btn-primary btn-pad" 
+            <ul className="list-unstyled list-inline text-center">
+              <li> 
+                <button className="btn btn-primary" 
                 onClick={ () => dispatch(task('working')) }>Working</button>
-              <button className="btn btn-primary btn-pad"
+              </li>
+              <li>
+                <button className="btn btn-primary"
                 onClick={ () => dispatch(task('atmeeting')) }>At a meeting</button> 
-              <button className="btn btn-primary btn-pad"
+              </li>
+              <li>
+                <button className="btn btn-primary"
                 onClick={ () => dispatch(task('onbreak')) }>On my break</button>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

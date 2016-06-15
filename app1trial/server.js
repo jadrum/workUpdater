@@ -15,7 +15,7 @@ app.get("/", function(req, res) {
 })
 
 app.get("/style.css", function(req, res) {
-  res.sendFile(__dirname + '/css/main.css')
+  res.sendFile(__dirname + '/css/style.css')
 })
 
 app.get("/status.js", function(req,res) {

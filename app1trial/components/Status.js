@@ -5,9 +5,9 @@ const Status = () => (
     <div className="row">
       <div className="col-xs-12">
         <div className="panel panel-info" >
-          <div className="panel-heading"><strong>Most recent update</strong></div>
+          <div className="panel-heading"><h4>Most recent update</h4></div>
           <div className="panel-body">
-            <span id="status">"attempting to set up crap"</span>
+            Put the form info here  
           </div>  
         </div>
       </div>
