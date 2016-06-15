@@ -8,7 +8,7 @@ let UpdateStatus = ({ dispatch }) => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div classNmae="col-xs-12">  
+        <div className="col-xs-12">  
           <form className="form-horizontal top gradient" 
             onSubmit={e => {
               e.preventDefault()
@@ -17,7 +17,7 @@ let UpdateStatus = ({ dispatch }) => {
               }
               dispatch(updateStatus(textarea.value))
               input.value = ''
-            }}>>
+            }}>
             <div className="form-group">
               <label className="col-xs-2 control-label txtCol">Work Status:</label>
               <div className="col-xs-10">

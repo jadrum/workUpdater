@@ -9,11 +9,11 @@ const ImDoing = () => (
             <strong>I am <span id="iAmDoing">working.</span></strong>
           </div>
           <div className="panel-body">
-            <p className="text-center">
-              <button id="working" className="btn btn-primary">Working</button>
-              <button id="atMeeting" className="btn btn-primary">At a meeting</button> 
-              <button id="onBreak" className="btn btn-primary">On my break</button>
-            </p>
+            <div className="btn-toolbar">
+              <button id="working" className="btn btn-primary btn-pad">Working</button>
+              <button id="atMeeting" className="btn btn-primary btn-pad">At a meeting</button> 
+              <button id="onBreak" className="btn btn-primary btn-pad">On my break</button>
+            </div>
           </div>
         </div>
       </div>

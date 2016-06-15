@@ -1,16 +1,15 @@
 import React from 'react'
-import NavIt from './NavIt'
+import Navbar from './Navbar'
 import Status from './Status'
-import Form from './Form'
-import ImDoing from './ImDoing'
+import CurrentTask from './CurrentTask'
 import UpdateStatus from '../containers/UpdateStatus'
 
 const App = () => (
     <div>
-      <NavIt />
+      <Navbar />
       <Status />
       <UpdateStatus />
-      <ImDoing />
+      <CurrentTask />
     </div>
 )
 
