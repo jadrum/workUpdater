@@ -9,7 +9,7 @@ const updater = (state, action) => {
       return "working."
     case 'ATMEETING':
       console.log('I reached the meeting updater reducer');
-      return { updater: "at a meeting." }  
+      return "at a meeting." 
     case 'ONBREAK':
       console.log('I reached the break updater reducer');
       return "on my break."

@@ -6,7 +6,7 @@ const form = (state, action) => {
   switch(action.type) {
     case 'UPDATE_STATUS':
       console.log("I reached the form reducer")
-      return 'undefined'
+      return action.text 
     default:
       return state
   }
