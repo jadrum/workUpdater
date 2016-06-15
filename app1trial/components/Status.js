@@ -7,7 +7,7 @@ const Status = () => (
         <div className="panel panel-info" >
           <div className="panel-heading"><strong>Most recent update</strong></div>
           <div className="panel-body">
-            <span id="status">Waiting on a status update...</span>
+            <span id="status">"attempting to set up crap"</span>
           </div>  
         </div>
       </div>

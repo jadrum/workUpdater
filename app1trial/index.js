@@ -10,8 +10,8 @@ import form from './data/status'
 import updater from './data/update'
 
 const defaultState = {
-        form,
-        updater
+  form: "waiting on a status update...",
+  updater: "working."
 }
 
 const enhancers = compose(
