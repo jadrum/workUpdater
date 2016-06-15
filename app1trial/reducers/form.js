@@ -1,12 +1,11 @@
 const form = (state, action) => {
-  console.log("Sending the form!!");
-  
   if (typeof state === 'undefined') {
     return "Waiting on a status update..."
   } 
 
   switch(action.type) {
-    case 'UPDATED':
+    case 'UPDATE_STATUS':
+      console.log("I reached the form reducer")
       return 'undefined'
     default:
       return state
