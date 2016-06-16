@@ -1,5 +1,7 @@
 import React from 'react'
-
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actionCreators from '../actions/index'
 const NavIt = () => (
    <nav className="navbar navbar-default">
       <div className="container-fluid">
@@ -30,4 +32,14 @@ const NavIt = () => (
     </nav>
 )
 
-export default NavIt 
+const mapStateToProps = (state) => {
+  return {
+    status: state.status
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavIt); 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 const Status = (state) => (
   <div className="container-fluid">
@@ -15,4 +16,12 @@ const Status = (state) => (
   </div>
 )
 
-export default Status
+const mapStateToProps = (state) => {
+  return {
+    status: state.status,
+    currenttask: state.currenttask
+  };
+}
+
+
+export default connect(mapStateToProps)(Status)
