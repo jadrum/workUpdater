@@ -4,8 +4,6 @@ const stat = (state, action) => {
       var date = new Date();
       var hour = date.getUTCHours() - 4;
       var minutes = date.getUTCMinutes();
-      console.log(hour + ":" + minutes);
-
       if (minutes < 10) {
         return {
           text: action.text,
@@ -18,7 +16,6 @@ const stat = (state, action) => {
         }
       }
     default:
-      console.log("I went to default for some odd reason")
       return state
   }
 }
@@ -31,7 +28,6 @@ const status = (state = [], action) => {
 
   switch(action.type) {
     case 'UPDATE_STATUS':
-      console.log("I reached the form reducer")
       return [
         ...state,
         stat(undefined, action)

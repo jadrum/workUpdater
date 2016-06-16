@@ -3,8 +3,8 @@ import React from 'react'
 const renderUpdate = (status, i ) => {
   if (i !== 0) {
     return (
-    <div>
-      <li key={i}>
+    <div key={i}>
+      <li>
         <strong>{status.time}</strong> {status.text}
       </li>
       <hr />
@@ -27,7 +27,7 @@ class PreviousUpdates extends React.Component {
               <div className="panel-heading txtCol">
                 <h4>Previous updates</h4>
               </div>
-              <div className="panel-body">
+              <div className="panel-body panel-restriction">
                 <ul className="list-unstyled">
                   {this.props.status.map(renderUpdate)}
                 </ul>

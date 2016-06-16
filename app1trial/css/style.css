@@ -7,7 +7,11 @@ body {
   color: #4573a1;
 }
 
-
+.panel-restriction {
+  height: auto;
+  max-height: 600px;
+  overflow-x: hidden;  
+}
 
 .gradient {
   background-color: #BDE5F8;

@@ -21,8 +21,9 @@ let UpdateStatus = ({ dispatch }) => {
             <div className="form-group">
               <label className="col-xs-2 control-label txtCol">Work Status:</label>
               <div className="col-xs-10">
-                <textarea className="form-control" rows="5" 
-                  ref={node => { textarea = node }}>
+                <textarea className="form-control" placeholder="What have you been working on? 
+                  What do you plan to work on next?"
+                  rows="5" ref={node => { textarea = node }}>
                     </textarea>
               </div>
             </div>
