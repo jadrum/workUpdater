@@ -32,14 +32,4 @@ const NavIt = () => (
     </nav>
 )
 
-const mapStateToProps = (state) => {
-  return {
-    status: state.status
-  };
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators(actionCreators, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(NavIt); 
+export default NavIt 

@@ -4,20 +4,22 @@ import Navbar from './Navbar'
 import Status from './Status'
 import CurrentTask from './CurrentTask'
 import UpdateStatus from '../containers/UpdateStatus'
+import PreviousUpdates from './PreviousUpdates'
 
 let App = (state) => (
-   <div>
-      <Navbar />
-      <Status status={state.status}/>
-      <UpdateStatus  />
-      <CurrentTask currenttask={state.currenttask} />
- </div>
+  <div>
+    <Navbar />
+    <Status status={state.status}/>
+    <UpdateStatus  />
+    <CurrentTask currentTask={state.currentTask} />
+    <PreviousUpdates status={state.status} />
+  </div>
 )
 
 function mapStateToProps(state) {
   return {
     status: state.status,
-    currenttask: state.currenttask
+    currentTask: state.currentTask
   }
 }
 

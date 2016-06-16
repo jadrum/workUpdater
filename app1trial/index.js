@@ -14,7 +14,7 @@ const defaultState = {
             text: "waiting on a status update...",
             time: ""
           }],
-  currenttask: "working."
+  currentTask: "working."
 }
 
 const enhancers = compose(

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import currenttask from './currenttask'
+import currentTask from './currentTask'
 import status from './status'
 
 const updaterApp = combineReducers({
-  currenttask,
+  currentTask,
   status
 })
 
