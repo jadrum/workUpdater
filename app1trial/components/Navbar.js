@@ -1,7 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import * as actionCreators from '../actions/index'
+
 const NavIt = () => (
    <nav className="navbar navbar-default">
       <div className="container-fluid">

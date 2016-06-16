@@ -1,11 +1,10 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
 const renderUpdate = (status, i ) => {
   if (i !== 0) {
     return (
     <div>
-      <li>
+      <li key={i}>
         <strong>{status.time}</strong> {status.text}
       </li>
       <hr />
@@ -14,23 +13,31 @@ const renderUpdate = (status, i ) => {
   } 
 }
 
-const PreviousUpdates = (state) => (
-  <div className="container-fluid">
-    <div className="row">
-      <div className="col-xs-12 top">
-        <div className="panel panel-info">
-          <div className="panel-heading txtCol">
-            <h4>Previous updates</h4>
-          </div>
-          <div className="panel-body">
-            <ul className="list-unstyled">
-              {state.status.map(renderUpdate)}
-            </ul>
+class PreviousUpdates extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-xs-12 top">
+            <div className="panel panel-info">
+              <div className="panel-heading txtCol">
+                <h4>Previous updates</h4>
+              </div>
+              <div className="panel-body">
+                <ul className="list-unstyled">
+                  {this.props.status.map(renderUpdate)}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-)
+    )
+  }
+}
 
 export default PreviousUpdates
