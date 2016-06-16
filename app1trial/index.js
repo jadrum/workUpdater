@@ -12,7 +12,7 @@ import updater from './data/update'
 const defaultState = {
   status: [{
             text: "waiting on a status update...",
-            time: "9:05"
+            time: ""
           }],
   currenttask: "working."
 }

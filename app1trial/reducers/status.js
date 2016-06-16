@@ -1,10 +1,21 @@
 const stat = (state, action) => {
   switch(action.type) {
     case 'UPDATE_STATUS':
-      console.log("I reached the creation of the status obj")
-      return {
-        text: action.text,
-        time: "11:11"
+      var date = new Date();
+      var hour = date.getUTCHours() - 4;
+      var minutes = date.getUTCMinutes();
+      console.log(hour + ":" + minutes);
+
+      if (minutes < 10) {
+        return {
+          text: action.text,
+          time: hour + ":0" + minutes
+        }
+      } else {
+        return {
+          text: action.text,
+          time: hour + ":" + minutes 
+        }
       }
     default:
       console.log("I went to default for some odd reason")

@@ -8,7 +8,7 @@ const Status = (state) => (
         <div className="panel panel-info" >
           <div className="panel-heading"><h4>Most recent update</h4></div>
           <div className="panel-body">
-            {state.status}    
+            {state.time} {state.status}    
           </div>  
         </div>
       </div>
@@ -18,7 +18,8 @@ const Status = (state) => (
 
 const mapStateToProps = (state) => {
   return {
-    status: state.status[0].text,
+    status: state.status[state.status.length - 1].text,
+    time: state.status[state.status.length - 1].time,
     currenttask: state.currenttask
   };
 }
