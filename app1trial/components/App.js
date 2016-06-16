@@ -5,6 +5,7 @@ import Status from './Status'
 import CurrentTask from './CurrentTask'
 import UpdateStatus from '../containers/UpdateStatus'
 import PreviousUpdates from './PreviousUpdates'
+import Fetch from 'react-fetch'
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +19,10 @@ class App extends React.Component {
         <Status status={this.props.status}/>
         <UpdateStatus  />
         <CurrentTask currentTask={this.props.currentTask} />
-        <PreviousUpdates status={this.props.status} />
+        <PreviousUpdates status={this.props.status} />'
+        <Fetch url="https://api.github.com/users/github">
+          <TestComponent/>
+        </Fetch> 
       </div>
     )
   }
@@ -32,6 +36,29 @@ function mapStateToProps(state) {
   return {
     status: state.status,
     currentTask: state.currentTask
+  }
+}
+
+class TestComponent extends React.Component{
+  render(){
+    console.log(this.props)
+    return (
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-xs-12">
+            <div className="panel panel-info">
+              <div className="panel-heading"><h4>Fetch ajax play</h4></div>
+              <div className="panel-body">
+                <ul className="list-unstyled">
+                  <li>Name: {this.props.name}</li>
+                  <li>Public Repos: {this.props.public_repos}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ) 
   }
 }
 

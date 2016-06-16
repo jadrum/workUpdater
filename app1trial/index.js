@@ -6,8 +6,7 @@ import { createStore, compose } from 'redux'
 
 import updaterApp from './reducers'
 import App from './components/App.js'
-import form from './data/status'
-import updater from './data/update'
+import updater from './data/update.js'
 
 const defaultState = {
   status: [{
@@ -29,3 +28,4 @@ render(
   </Provider>,
   document.getElementById('root')
 )
+

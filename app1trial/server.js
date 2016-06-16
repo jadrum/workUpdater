@@ -26,6 +26,10 @@ app.get("/update.js", function(req, res) {
   res.sendFile(__dirname + '/data/update.js')
 })
 
+app.get("/sampleinfo.js", function(req, res) {
+  res.sendFile(__dirname + '/data/sampleinfo.js')
+})
+
 app.listen(port, function(error) {
   if (error) {
     console.error(error)

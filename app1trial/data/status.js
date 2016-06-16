@@ -1,7 +1,4 @@
-const form = {
-  "first": [
-  {
-    "text":"I just finished my first meeting of the day"
-  }
-  ]
+{
+  "text":"I just finished my first meeting of the day"
 }
+
