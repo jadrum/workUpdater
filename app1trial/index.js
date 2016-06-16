@@ -10,7 +10,10 @@ import form from './data/status'
 import updater from './data/update'
 
 const defaultState = {
-  status: "waiting on a status update...",
+  status: [{
+            text: "waiting on a status update...",
+            time: "9:05"
+          }],
   currenttask: "working."
 }
 

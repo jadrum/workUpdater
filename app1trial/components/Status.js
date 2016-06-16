@@ -18,7 +18,7 @@ const Status = (state) => (
 
 const mapStateToProps = (state) => {
   return {
-    status: state.status,
+    status: state.status[0].text,
     currenttask: state.currenttask
   };
 }
