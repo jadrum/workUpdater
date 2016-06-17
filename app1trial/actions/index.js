@@ -22,3 +22,18 @@ export const task = (text) => {
     }
   }
 }
+
+export const fetchPractice = () => {
+  return fetchPract()
+    .then(function(response) {
+      if (response !== 200) {
+        console.log(response.status)
+      }
+      return response.json();
+    }).then(function(data) {
+      return {
+        type: 'FETCH_IT',
+        data: data
+      };
+    })
+}

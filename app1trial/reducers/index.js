@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import currentTask from './currentTask'
 import status from './status'
+import fetchPractice from './fetchPractice'
 
 const updaterApp = combineReducers({
   currentTask,
-  status
+  status,
+  fetchPractice
 })
 
 export default updaterApp
