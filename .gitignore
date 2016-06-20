@@ -6,3 +6,6 @@ app2_redo/node_modules
 
 # This ignors app1trial node modules
 app1trial/node_modules
+
+# This ignores the ds
+app1trial/.DS_Store

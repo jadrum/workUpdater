@@ -22,3 +22,13 @@ export const task = (text) => {
     }
   }
 }
+
+export const fetch = (txt) => {
+  if (txt === 'sup') {
+    console.log("i reached the action woohoo")
+    return {
+      type: 'FETCH_IT',
+      data: txt
+    }
+  }
+}

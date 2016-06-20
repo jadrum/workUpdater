@@ -6,6 +6,8 @@ import CurrentTask from './CurrentTask'
 import UpdateStatus from '../containers/UpdateStatus'
 import PreviousUpdates from './PreviousUpdates'
 import Fetch from 'react-fetch'
+import FetchPractice from './FetchPractice'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -19,10 +21,11 @@ class App extends React.Component {
         <Status status={this.props.status}/>
         <UpdateStatus  />
         <CurrentTask currentTask={this.props.currentTask} />
-        <PreviousUpdates status={this.props.status} />'
+        <PreviousUpdates status={this.props.status} />
         <Fetch url="https://api.github.com/users/github">
           <TestComponent/>
-        </Fetch> 
+        </Fetch>
+        <FetchPractice fetchPractice={this.props.fetchPractice}/>
       </div>
     )
   }
@@ -35,7 +38,8 @@ App.propTypes = {
 function mapStateToProps(state) {
   return {
     status: state.status,
-    currentTask: state.currentTask
+    currentTask: state.currentTask,
+    fetchPractice: state.fetchPractice
   }
 }
 
