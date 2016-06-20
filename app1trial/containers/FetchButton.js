@@ -4,7 +4,7 @@ import { fetch } from '../actions'
 
 let FetchButton = ({ dispatch }) => (
   <button className="btn btn-primary"
-  onClick={ () => dispatch(fetch('sup')) }>Tyin toFetch</button>
+  onClick={ () => dispatch(fetch()) }>Tyin toFetch</button>
 )
 
 FetchButton = connect()(FetchButton)

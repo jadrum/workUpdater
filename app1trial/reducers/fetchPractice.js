@@ -1,3 +1,5 @@
+
+
 const fetchPractice = (state, action) => {
   let result;
 
