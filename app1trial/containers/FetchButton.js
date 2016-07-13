@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetch } from '../actions'
+import { fetcher } from '../actions'
 
 let FetchButton = ({ dispatch }) => (
   <button className="btn btn-primary"
-  onClick={ () => dispatch(fetch()) }>Tyin toFetch</button>
+  onClick={ () => dispatch(fetcher()) }>Tyin toFetch</button>
 )
 
 FetchButton = connect()(FetchButton)

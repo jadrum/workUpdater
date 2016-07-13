@@ -9,3 +9,9 @@ app1trial/node_modules
 
 # This ignores the ds
 app1trial/.DS_Store
+
+# This ignores app3 node modules
+app3/node_modules
+
+# This ignores app3 ds
+app3/.DS_Store

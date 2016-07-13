@@ -3,8 +3,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, compose, applyMiddleware } from 'redux'
-import thunk from './reducers/index'
-import updaterApp from './reducers'
+import thunk from 'redux-thunk'
+import rootReducer from './reducers'
 import App from './components/App.js'
 import updater from './data/update.js'
 
@@ -26,7 +26,7 @@ const enhancers = compose(
   window.devToolsExtension ? window.devToolsExtension(): f => f
 );
 
-let store = createStore(updaterApp, defaultState, enhancers);
+let store = createStore(rootReducer, defaultState, applyMiddleware(thunk), enhancers);
 
 render(
   <Provider store={store}>

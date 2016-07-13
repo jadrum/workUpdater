@@ -1,4 +1,4 @@
-import Fetch from 'whatwg-fetch';
+import 'whatwg-fetch';
 
 export const updateStatus = (text) => {
   return {
@@ -25,17 +25,10 @@ export const task = (text) => {
   }
 }
 
-const fetching = () => {
-  console.log("I am in fetching method");
+export const fetcher = () => {
   let url = 'https://api.github.com/users/github';
-  return fetch(url);
-}
-
-export const fetch = () => {
-  console.log("I am currently about to fetch");
-  return function(dispatch) {
-    console.log("I am currently about to fetch");
-    fetching()
+  return function(dispatch, getState) {
+    fetch(url)
       .then(function(response) {
         if (response.status !== 200) {
           console.log('I didnt get a passing status');

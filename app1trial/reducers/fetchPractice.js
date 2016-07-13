@@ -10,10 +10,10 @@ const fetchPractice = (state, action) => {
   switch(action.type) {
     case 'FETCH_IT':
       result = Object.assign( {}, state, {
-        avatar_url: 'hey',
-        bio: 'whats up',
-        events_url: 'hi',
-        repos_url: 'i reached the reducer'
+        avatar_url: action.payload.avatar_url,
+        bio: action.payload.bio,
+        events_url: action.payload.events_url,
+        repos_url: action.payload.repos_url
       });
       return result;
     default:
