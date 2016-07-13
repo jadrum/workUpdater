@@ -1,7 +1,6 @@
- 
 const CurrentTask = (state, action) => {
   if(typeof state === 'undefined'){
-    return "working"
+    return "working."
   } 
 
   switch(action.type) {

@@ -1,3 +1,8 @@
+const initialState = [{
+            text: "waiting on a status update...",
+            time: "0:00"
+          }] 
+
 const stat = (state, action) => {
   switch(action.type) {
     case 'UPDATE_STATUS':
@@ -21,9 +26,9 @@ const stat = (state, action) => {
 }
 
 
-const status = (state = [], action) => {
+const status = (state, action) => {
   if (typeof state === 'undefined') {
-    return "Waiting on a status update..."
+    return initialState
   } 
 
   switch(action.type) {

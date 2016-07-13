@@ -8,25 +8,19 @@ import rootReducer from './reducers'
 import App from './components/App.js'
 import updater from './data/update.js'
 
-const defaultState = {
-  status: [{
-            text: "waiting on a status update...",
-            time: ""
-          }],
-  currentTask: "working.",
-  fetchPractice: {
-    avatar_url: "haventfetchedyet@fluff.com",
-    bio: "go ahead and press the button already",
-    events_url: "sadly you havent given me any events yet",
-    repos_url: "the repo url will appear after you fetch :)"
-  }
-}
+const middleware = applyMiddleware(thunk);
 
 const enhancers = compose(
   window.devToolsExtension ? window.devToolsExtension(): f => f
 );
 
-let store = createStore(rootReducer, defaultState, applyMiddleware(thunk), enhancers);
+const persistedState = localStorage.getItem('ReduxState') ? JSON.parse(localStorage.getItem('ReduxState')) : {}
+
+let store = createStore(rootReducer, persistedState, compose(applyMiddleware(thunk), enhancers));
+
+store.subscribe(() => {
+  localStorage.setItem('ReduxState', JSON.stringify(store.getState()))
+})
 
 render(
   <Provider store={store}>
