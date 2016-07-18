@@ -39,7 +39,7 @@ class TicketUpdates extends React.Component {
           <div className="col-xs-12 top">
             <div className="panel panel-info">
               <div className="panel-heading txtCol">
-                <h4 className="panelTitle">Ticket Updates</h4>
+                <h4 className="panelTitle">Ticket Updates </h4>
               </div>
               <table className="table panel-restriction">
                 <thead className="thead-default">

@@ -105,5 +105,4 @@ let TicketUpdater = ({ dispatch }) => {
   )
 }
 
-TicketUpdater = connect()(TicketUpdater)
-export default TicketUpdater
+export default connect()(TicketUpdater)
