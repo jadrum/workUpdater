@@ -18,6 +18,6 @@ describe('Testing the ticket updater', function() {
     }
     
     const wrapper = shallow(<TicketUpdater {...props} />);
-    assert.equal(wrapper.find('.form-group').prop('className'), 'form-group');
+    assert.equal(wrapper.find('.btn').prop('className'), 'btn');
   });
 });
