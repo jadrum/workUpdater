@@ -1,7 +1,7 @@
 import expect from 'expect'
 import ticketPanel from '../../reducers/ticketPanel'
 
-describe('ticket panel reducer tests', () => {
+describe('Testing the ticket panel reducers', () => {
   it('the reducer should obtain correct initial state', () => {
     expect(
       ticketPanel(undefined, {})

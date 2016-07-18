@@ -1,7 +1,7 @@
 import expect from 'expect'
 import * as actions from '../../actions'
 
-describe('ticket panel action tests', () => {
+describe('Testing the ticket panel actions', () => {
   it('payload should be assigned properly', () => {
     expect(actions.ticketUpdate({
       author: "Justin",

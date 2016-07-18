@@ -1,5 +1,4 @@
 export const ticketUpdate = (payload) => {
-  console.log(payload.author)
   return {
     type: 'TICKET_UPDATE',
     author: payload.author,

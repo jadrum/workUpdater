@@ -12,7 +12,7 @@ const {
   assert
 } = require( 'chai' );
 
-describe('components', function() {
+describe('Testing the ticket updates', function() {
   const props = {
     ticketPanel: [
       {

@@ -3,18 +3,17 @@ import { connect } from 'react-redux'
 import Navbar from './Navbar'
 import TicketUpdates from './TicketUpdates'
 import TicketUpdater from '../containers/TicketUpdater'
+import * as actionCreators from '../actions/index';
+import { bindActionCreators } from 'redux';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
       <div>
         <Navbar />
         <TicketUpdates ticketPanel={this.props.ticketPanel}/>
-        <TicketUpdater />
+        <TicketUpdater ticketUpdate={this.props.ticketUpdate}/>
       </div>
     )
   }
@@ -30,5 +29,9 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(App)
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
 
