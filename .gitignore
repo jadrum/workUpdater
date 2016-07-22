@@ -16,3 +16,6 @@ app3/node_modules
 
 # This ignores app3 ds
 app3/.DS_Store
+
+# This ignores data
+app3/data/

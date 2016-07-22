@@ -1,7 +1,7 @@
 import React from 'react'
 import { OverlayTrigger } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import { Popover } from 'react-bootstrap';
+import { Button, Popover, Modal } from 'react-bootstrap';
+var constants = require("../data/constants");
 
 const renderUpdate = (ticketUpdate, i) => {
   if (i !== 0) {
@@ -26,11 +26,43 @@ const renderUpdate = (ticketUpdate, i) => {
 class TicketUpdates extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showModal: false,
+      password: '',
+    }
+    this.close = this.close.bind(this);
+    this.open = this.open.bind(this);
+    this.onPassChange = this.onPassChange.bind(this);
+    this.onVerify = this.onVerify.bind(this);
   }
-  
+ 
   function() {
     ("[data-toggle=popover]").popover();
   };
+
+  close() {
+    this.setState({ showModal: false });
+  };
+
+  open() {
+    this.setState({ showModal: true });
+  };
+
+  onPassChange(e) {
+    this.setState({
+      password: e.target.value
+    })
+  }
+
+  onVerify() {
+    // DO STUFF
+    console.log('hi');
+    if(this.state.password === constants.masterPass) {
+      localStorage.setItem('reduxState', "");
+      window.location.reload();
+      this.close;
+    }
+  }
 
   render() {
     return (
@@ -39,7 +71,30 @@ class TicketUpdates extends React.Component {
           <div className="col-xs-12 top">
             <div className="panel panel-info">
               <div className="panel-heading txtCol">
-                <h4 className="panelTitle">Ticket Updates </h4>
+                <h4 className="panelTitle pull-left">Ticket Updates</h4> 
+                <Button className="btn btn-default pull-right" onClick={this.open}>Reset Updates </Button>
+                <Modal show={this.state.showModal} onHide={this.close}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Erase History</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <div className="row">
+                      <h4 className="col-xs-4 txtCol">Password: </h4>  
+                      <div className="col-xs-8">
+                        <input className="form-control inputFontSize" 
+                          placeholder="Whats the authorized password?"
+                          ref="passEnter"
+                          onChange={this.onPassChange}
+                          value={this.state.password}>
+                            </input>
+                      </div>
+                    </div>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button onClick={this.onVerify}>Submit</Button>
+                    <Button onClick={this.close}>Cancel</Button>
+                  </Modal.Footer>
+                </Modal>
               </div>
               <table className="table panel-restriction">
                 <thead className="thead-default">

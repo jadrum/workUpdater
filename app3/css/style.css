@@ -29,15 +29,20 @@ body {
 }
 
 .panel 
-  > .panel-heading {
+  > .panel-heading, .modal-header {
     background-color: var(--jewel);
     color: var(--fuschia);
     border-color: var(--stark);
 }
 
-.panel {
+.panel, .modal-body, .modal-footer {
   background-color: var(--void);
   border-color: var(--stark);
+}
+
+.modal-content {
+  border: 1px solid var(--stark);
+  box-shadow: 0 5px 15px rgba(135, 136, 63, 0.5);
 }
 
 .overlayButton {
@@ -99,6 +104,10 @@ textarea {
 
 .txtCol {
   color: var(--fuschia);
+}
+
+.inputFontSize {
+  font-size: 14px;
 }
 
 .gradien {
