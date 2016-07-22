@@ -71,30 +71,36 @@ class TicketUpdates extends React.Component {
           <div className="col-xs-12 top">
             <div className="panel panel-info">
               <div className="panel-heading txtCol">
-                <h4 className="panelTitle pull-left">Ticket Updates</h4> 
-                <Button className="btn btn-default pull-right" onClick={this.open}>Reset Updates </Button>
-                <Modal show={this.state.showModal} onHide={this.close}>
-                  <Modal.Header closeButton>
-                    <Modal.Title>Erase History</Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <div className="row">
-                      <h4 className="col-xs-4 txtCol">Password: </h4>  
-                      <div className="col-xs-8">
-                        <input className="form-control inputFontSize" 
-                          placeholder="Whats the authorized password?"
-                          ref="passEnter"
-                          onChange={this.onPassChange}
-                          value={this.state.password}>
-                            </input>
-                      </div>
-                    </div>
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button onClick={this.onVerify}>Submit</Button>
-                    <Button onClick={this.close}>Cancel</Button>
-                  </Modal.Footer>
-                </Modal>
+                <div className="row">
+                  <div className="col-xs-10">
+                    <h4 className="panelTitle pull-left">Ticket Updates</h4> 
+                  </div>
+                  <div className="col-xs-2">
+                    <Button className="btn btn-default" onClick={this.open}>Reset Updates </Button>
+                    <Modal show={this.state.showModal} onHide={this.close}>
+                      <Modal.Header closeButton>
+                        <Modal.Title>Erase History</Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body>
+                        <div className="row">
+                          <h4 className="col-xs-4 txtCol">Password: </h4>  
+                          <div className="col-xs-8">
+                            <input className="form-control inputFontSize" 
+                              placeholder="Whats the authorized password?"
+                              ref="passEnter"
+                              onChange={this.onPassChange}
+                              value={this.state.password}>
+                                </input>
+                          </div>
+                        </div>
+                      </Modal.Body>
+                      <Modal.Footer>
+                        <Button onClick={this.onVerify}>Submit</Button>
+                        <Button onClick={this.close}>Cancel</Button>
+                      </Modal.Footer>
+                    </Modal>
+                  </div>
+                </div>
               </div>
               <table className="table panel-restriction">
                 <thead className="thead-default">
