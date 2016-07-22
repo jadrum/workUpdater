@@ -4,7 +4,7 @@ import CurrentTask from '../components/CurrentTask'
 import UpdateStatus from './UpdateStatus'
 import PreviousUpdates from '../components/PreviousUpdates'
 
-class Updater extends React.Component {
+class Statuses extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -21,4 +21,4 @@ class Updater extends React.Component {
   }
 }
 
-export default Updater
+export default Statuses

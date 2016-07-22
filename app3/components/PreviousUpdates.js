@@ -4,7 +4,7 @@ const renderUpdate = (status, i ) => {
   if (i !== 0) {
     return (
     <div key={i}>
-      <li>
+      <li className="txtCol">
         <strong>{status.time}</strong> {status.text}
       </li>
       <hr />

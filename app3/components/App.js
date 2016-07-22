@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import * as actionCreators from '../actions/index';
 import { bindActionCreators } from 'redux';
 import Tickets from '../containers/Tickets';
-import StatusUpdater from '../containers/StatusUpdater';
+import Statuses from '../containers/Statuses';
 
 class App extends React.Component {
   constructor() {
@@ -46,7 +46,7 @@ class App extends React.Component {
             ticketUpdate={this.props.ticketUpdate} 
               />}
         {this.state.showUpdater &&
-          <StatusUpdater
+          <Statuses
             status={this.props.status}
             currentTask={this.props.currentTask}
               />}
