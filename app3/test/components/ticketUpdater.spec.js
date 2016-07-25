@@ -9,7 +9,7 @@ const {
   mount, 
   render
 } = require('enzyme');
-import { TicketUpdater } from '../../containers/TicketUpdater'
+import { TicketUpdater } from '../../components/TicketUpdater'
 import sinon from 'sinon'
 
 function setup() {

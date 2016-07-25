@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, compose, applyMiddleware } from 'redux'
 import index from './reducers'
-import App from './components/App.js'
+import App from './containers/App.js'
 
 
 const enhancers = compose(

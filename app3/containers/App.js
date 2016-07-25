@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar'
 import * as actionCreators from '../actions/index';
 import { bindActionCreators } from 'redux';
-import Tickets from '../containers/Tickets';
-import Statuses from '../containers/Statuses';
+import Tickets from './Tickets';
+import Statuses from './Statuses';
 
 class App extends React.Component {
   constructor() {
@@ -49,6 +49,8 @@ class App extends React.Component {
           <Statuses
             status={this.props.status}
             currentTask={this.props.currentTask}
+            task={this.props.task}
+            updateStatus={this.props.updateStatus}
               />}
       </div>
     )

@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import * as actionCreators from '../actions/index'
-import { bindActionCreators } from 'redux'
 
 export class TicketUpdater extends Component {
   constructor(props) {
@@ -82,14 +80,15 @@ export class TicketUpdater extends Component {
                   time: this.refs.time.value,
                   currentStatus: this.refs.currentStatus.value,
                   details: this.refs.details.value
-                    })
-                this.refs.author.value = ''
-                this.refs.ticketNum.value = ''
-                this.refs.date.value = ''
-                this.refs.time.value = ''
-                this.refs.currentStatus.value = ''
-                this.refs.details.value = ''
-
+                })
+                this.setState({
+                  author: '',
+                  ticketNum: '',
+                  date: '',
+                  time: '',
+                  currentStatus: '',
+                  details: ''
+                })
               }}>
               
               <div className="form-group">

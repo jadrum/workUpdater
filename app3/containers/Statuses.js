@@ -1,7 +1,7 @@
 import React from 'react'
 import Status from '../components/Status'
 import CurrentTask from '../components/CurrentTask'
-import UpdateStatus from './UpdateStatus'
+import UpdateStatus from '../components/UpdateStatus'
 import PreviousUpdates from '../components/PreviousUpdates'
 
 class Statuses extends React.Component {
@@ -13,8 +13,8 @@ class Statuses extends React.Component {
     return (
       <div>
         <Status status={this.props.status}/>
-        <UpdateStatus  />
-        <CurrentTask currentTask={this.props.currentTask} />
+        <UpdateStatus  updateStatus={this.props.updateStatus} />
+        <CurrentTask currentTask={this.props.currentTask} task={this.props.task} />
         <PreviousUpdates status={this.props.status} />
       </div>
     )
