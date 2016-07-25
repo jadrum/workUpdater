@@ -46,7 +46,7 @@ describe('Testing the ticket updates component', function() {
 
   it('should pass className:overlayButton to overlay button', function() {
     const wrapper = shallow(<TicketUpdates {...props} />);
-    assert.equal(wrapper.find('.overlayButton').prop('className'), 'overlayButton');
+    assert.equal(wrapper.find('.overlayButton').prop('className'), 'btn-custom overlayButton');
   });
 
   it('should pass children:details to overlay button', function() {
