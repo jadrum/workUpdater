@@ -1,6 +1,6 @@
 import React from 'react'
 import TicketUpdates from '../components/TicketUpdates'
-import TicketUpdater from './TicketUpdater'
+import TicketUpdater from '../components/TicketUpdater'
 import * as actionCreators from '../actions/index';
 import { bindActionCreators } from 'redux';
 
