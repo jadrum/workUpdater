@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap';
 
 class ButtonBody extends React.Component {
   constructor(props) {
@@ -10,15 +11,15 @@ class ButtonBody extends React.Component {
       <div className="panel-body">
         <ul className="list-unstyled list-inline text-center">
           <li> 
-            <button className="btn btn-primary" 
-            onClick={ () => this.props.task('working') }>Working</button>
+            <Button className="btn btn-custom" 
+            onClick={ () => this.props.task('working') }>Working</Button>
           </li>
           <li>
-            <button className="btn btn-primary"
+            <button className="btn btn-custom"
             onClick={ () => this.props.task('atmeeting') }>At a meeting</button> 
           </li>
           <li>
-            <button className="btn btn-primary"
+            <button className="btn btn-custom"
             onClick={ () => this.props.task('onbreak') }>On my break</button>
           </li>
         </ul>

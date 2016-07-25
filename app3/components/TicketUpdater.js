@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'react-bootstrap'
 
 export class TicketUpdater extends Component {
   constructor(props) {
@@ -159,7 +160,7 @@ export class TicketUpdater extends Component {
 
               <div className="form-group">
                 <div className="col-xs-11 col-xs-offset-1">
-                  <button type="Submit" className="btn">Submit</button>
+                  <button type="Submit" className="btn btn-custom">Submit</button>
                 </div>
               </div>
             </form>

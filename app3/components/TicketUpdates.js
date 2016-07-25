@@ -15,7 +15,7 @@ const renderUpdate = (ticketUpdate, i) => {
         <td className="col-xs-1">
           <OverlayTrigger trigger="click" placement="left" 
             overlay={<Popover id={i} >{ticketUpdate.details}</Popover>}>
-              <Button bsStyle="default" className="overlayButton">details</Button>
+              <Button bsStyle="default" className="btn-custom overlayButton">details</Button>
           </OverlayTrigger>
         </td>
       </tr>
@@ -76,7 +76,7 @@ class TicketUpdates extends React.Component {
                     <h4 className="panelTitle pull-left">Ticket Updates</h4> 
                   </div>
                   <div className="col-xs-2">
-                    <Button className="btn btn-default" onClick={this.open}>Reset Updates </Button>
+                    <Button className="btn btn-custom" onClick={this.open}>Reset Updates </Button>
                     <Modal show={this.state.showModal} onHide={this.close}>
                       <Modal.Header closeButton>
                         <Modal.Title>Erase History</Modal.Title>
@@ -95,8 +95,10 @@ class TicketUpdates extends React.Component {
                         </div>
                       </Modal.Body>
                       <Modal.Footer>
-                        <Button onClick={this.onVerify}>Submit</Button>
-                        <Button onClick={this.close}>Cancel</Button>
+                        <Button className="btn btn-custom"
+                            onClick={this.onVerify}>Submit</Button>
+                        <Button className="btn btn-custom"
+                            onClick={this.close}>Cancel</Button>
                       </Modal.Footer>
                     </Modal>
                   </div>

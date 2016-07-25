@@ -42,7 +42,7 @@ class UpdateStatus extends React.Component {
               </div>
               <div className="form-group">
                 <div className="col-xs-10 col-xs-offset-2">
-                  <button type="Submit" className="btn btn-primary">Submit</button>
+                  <button type="Submit" className="btn btn-custom">Submit</button>
                 </div>
               </div>
             </form>

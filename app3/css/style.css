@@ -102,6 +102,23 @@ textarea {
   border-color: var(--stark);
 }
 
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  outline: 5px auto --var(--fushia) !important;
+  outline-offset: -2px !important;
+}
+
+.btn-custom:hover {
+  color: var(--void);
+  background-color: var(--stark);
+  border-color: var(--fuschia);
+}
+
+.btn-custom:active {
+  color: var(--void);
+  background-color: var(--stark);
+  border-color: var(--fuschia);
+}
+
 .txtCol {
   color: var(--fuschia);
 }
